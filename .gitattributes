@@ -1,1 +1,5 @@
+# Handle line endings
 * text=auto
+
+# Ensure node_modules are treated as binary to avoid issues
+/node_modules/* binary
