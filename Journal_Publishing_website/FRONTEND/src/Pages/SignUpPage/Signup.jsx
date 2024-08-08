@@ -129,6 +129,9 @@ export default function Signup({ toggleContainer }) {
                             <i className='bx bxs-lock-alt'></i>
                             <input type="password" placeholder="Confirm password" name="confirm_password" onChange={handleChange} value={formData.confirm_password} required  />
                         </div>
+                        <p className="text-gray-500">
+                            password must contain atleast: 1-uppercase , numerical value and special-character[$#%&*]
+                        </p>
                         <button type="submit">
                             Sign up
                         </button>

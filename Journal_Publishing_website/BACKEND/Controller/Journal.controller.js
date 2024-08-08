@@ -129,8 +129,12 @@ const getANote = async (req,res)=>{
 const updateANote = async (req,res)=>{
     try {
         let {noteId} = req.params;
+        console.log(noteId)
         let  {title,content} = req.body;
+        console.log(title)
+        console.log(content)
         let result = await journalService.updateNote(noteId,title,content);
+        console.log(result)
         res.status(200).send(result);
     } catch (error) {
         res.status(500).send(error);

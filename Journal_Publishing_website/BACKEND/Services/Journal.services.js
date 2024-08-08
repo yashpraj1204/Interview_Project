@@ -83,6 +83,7 @@ async function updateNote(noteId,title,content){
     let changedNote = await journalModels.noteModel.findByIdAndUpdate(noteId,{title:title,content:content,create_at:Date()});
     return changedNote;
 }
+
 // delete Note
 
 async function deleteNote(noteId){

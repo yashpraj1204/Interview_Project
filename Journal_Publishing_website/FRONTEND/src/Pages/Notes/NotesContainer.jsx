@@ -21,8 +21,10 @@ export default function NotesContainer(){
     const addNew = async (event)=>{
       event.preventDefault(); 
       let result = await addNewNote(id,journalId);
-      setNotesList([{title:result[0].title,content:result[0].content,create_at:result[0].create_at},...notesList])
-
+      if(result){
+        setNotesList([{title:result[0].title,content:result[0].content,create_at:result[0].create_at},...notesList])
+      }
+      
     }
     const backTo = (event)=>{
       event.preventDefault();

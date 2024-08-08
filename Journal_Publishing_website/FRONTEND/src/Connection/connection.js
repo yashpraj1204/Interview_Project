@@ -32,8 +32,12 @@ const getSingleNote = async (id,journalId,noteId) =>{
     return data;
 }
 
-const updateANote = async (id,journalId,noteId)=>{
-    let {data} = await axios.put(`http://localhost:8080/journal/${id}/${journalId}/${noteId}`);
+const updateANote = async (id,journalId,noteId,title,content)=>{
+    let data = await axios.put(`http://localhost:8080/journal/${id}/${journalId}/${noteId}`,{title:title,content:content});
     return data;
 }
-export {allJournalDataById,newJournalAdd,deleteAJournal,fetchNotesforAJournal,addNewNote,getSingleNote,updateANote}
+const deleteANote = async (id,journalId,noteId)=>{
+    let data = await axios.delete(`http://localhost:8080/journal/${id}/${journalId}/${noteId}`)
+    return data;
+}
+export {allJournalDataById,newJournalAdd,deleteAJournal,fetchNotesforAJournal,deleteANote,addNewNote,getSingleNote,updateANote}
