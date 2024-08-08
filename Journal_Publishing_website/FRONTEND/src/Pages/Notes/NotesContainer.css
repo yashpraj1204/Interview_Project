@@ -1,0 +1,73 @@
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; 
+  }
+  
+  .note-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 1s, box-shadow 0.3s;
+    height: 20rem;
+    position: relative;
+    margin: 2rem 5.5rem;
+  }
+  
+  .note-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note-header {
+    margin-bottom: 10px;
+    position: relative;
+    width: inherit;
+  }
+  
+  .note-title-date {
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 4rem;
+  }
+  
+  .note-title-date  .note-title {
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 1s ease-in-out;
+    margin-left: 1rem;
+  }
+  
+  .note-title-date .note-date {
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    margin-right: 1rem;
+  }
+  
+  .note-content {
+    font-size: 16px;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 10rem;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    margin: 0 1rem;
+    margin-top: 2rem ;
+    padding: 1rem;
+  }
+
+  .back-button button{
+    border-radius: 1rem;
+    border:solid white
+  }
